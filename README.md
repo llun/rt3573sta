@@ -71,7 +71,7 @@ mkdir /usr/src/rt3573sta-1.0/
 cd ~/DIRECTORY/WITH/THIS/REPO
 sudo cp -a * /usr/src/rt3573sta-1.0/
 ls /usr/src/rt3573sta-1.0/
-     chips  common  dkms.conf  include  iwpriv_usage.txt  Makefile  os  rate_ctrl  README_STA_usb  RT2870STACard.dat  RT2870STA.dat  sta  sta_ate_iwpriv_usage.txt  tools
+     chips  common  include  iwpriv_usage.txt  Makefile  os  rate_ctrl  README_STA_usb  RT2870STACard.dat  RT2870STA.dat  sta  sta_ate_iwpriv_usage.txt  tools
 
 ```
 3. Create a file names `dkms.conf`, and with your favorite editor configure dkms. Example:
