@@ -76,7 +76,7 @@ ls /usr/src/rt3573sta-1.0/
      chips  common  include  iwpriv_usage.txt  Makefile  os  rate_ctrl  README_STA_usb  RT2870STACard.dat  RT2870STA.dat  sta  sta_ate_iwpriv_usage.txt  tools
 
 ```
-Create a file names `dkms.conf`, and with your favorite editor configure dkms. Example:
+Create a file named `dkms.conf`, and with your favorite editor configure dkms. Example:
 ``` 
 sudo vim /usr/src/rt3573sta-1.0/dkms.conf
 ```
