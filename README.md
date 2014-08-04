@@ -41,7 +41,7 @@ For Arch:
 sudo touch /etc/modules-load.d/rt3573sta
 sudo echo "rt3573sta" > /etc/modules-load.d/rt3573sta
 ```
-Ubuntu suggests adding the module to the `/etc/modules/` file
+Ubuntu suggests adding the module to the `/etc/modules` file
 
 ### Blacklisting rt2800usb
 
