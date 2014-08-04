@@ -8,6 +8,8 @@ Patched version of this ralink driver to handle sk_buff structures properly on 6
 
 ##Installation
 
+*** The commands on this guide were executed with sudo when necessary ***
+
 Use `git clone` to clone this repository to a directory of your choosing. Example:
 ```
 mkdir drivers/
