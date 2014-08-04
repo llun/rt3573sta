@@ -62,11 +62,11 @@ For this to work, you will need to install dkms. [Ubuntu Wiki - DKMS](https://he
 
 Once you have installed dkms, you can now follow these instructions:
 
-1. Create a directory at `/usr/src/`. Example:
+Create a directory at `/usr/src/`. Example:
 ```
 mkdir /usr/src/rt3573sta-1.0/
 ```
-2. Copy all the contents of this repository to that directory:
+Copy all the contents of this repository to that directory:
 ```
 cd ~/DIRECTORY/WITH/THIS/REPO
 sudo cp -a * /usr/src/rt3573sta-1.0/
@@ -74,7 +74,7 @@ ls /usr/src/rt3573sta-1.0/
      chips  common  include  iwpriv_usage.txt  Makefile  os  rate_ctrl  README_STA_usb  RT2870STACard.dat  RT2870STA.dat  sta  sta_ate_iwpriv_usage.txt  tools
 
 ```
-3. Create a file names `dkms.conf`, and with your favorite editor configure dkms. Example:
+Create a file names `dkms.conf`, and with your favorite editor configure dkms. Example:
 ``` 
 sudo vim /usr/src/rt3573sta-1.0/dkms.conf
 ```
@@ -89,15 +89,15 @@ BUILT_MODULE_LOCATION[0]="os/linux/"
 DEST_MODULE_LOCATION[0]="/kernel/drivers/net/wireless/"
 AUTOINSTALL="yes"
 ```
-4. Add the module to the dkms tree
+Add the module to the dkms tree
 ```
 sudo dkms add -m rt3573sta -v 1.0
 ```
-5. Build the module
+Build the module
 ```
 sudo dkms build -m rt3573sta -v 1.0
 ```
-6. Install the module
+Install the module
 ```
 sudo dkms install -m rt3573sta -v 1.0
 ```
