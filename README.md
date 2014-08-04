@@ -21,7 +21,7 @@ cd rt3573sta/
 sudo make
 ```
 
-If there were no errors and the compilation went smoothly install:
+If there were no errors and the compilation went smoothly, install:
 ```
 sudo make install
 ```
