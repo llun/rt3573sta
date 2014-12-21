@@ -875,7 +875,7 @@ ifeq ($(PLATFORM),PC)
 	export CFLAGS
     else
 	# Linux 2.6
-	EXTRA_CFLAGS := $(WFLAGS) -I$(RT28xx_DIR)/include -Wno-date-time
+	EXTRA_CFLAGS := $(WFLAGS) -I$(RT28xx_DIR)/include
     endif
 endif
 
