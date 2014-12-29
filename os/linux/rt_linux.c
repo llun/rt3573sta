@@ -2639,7 +2639,7 @@ BOOLEAN CFG80211_SupBandInit(
 	for(IdLoop=0; IdLoop<NumOfChan; IdLoop++)
 	{
 		pChannels[IdLoop].center_freq = \
-					ieee80211_channel_to_frequency(Cfg80211_Chan[IdLoop]);
+					ieee80211_channel_to_frequency(Cfg80211_Chan[IdLoop], Cfg80211_Chan[IdLoop]>14?IEEE80211_BAND_5GHZ:IEEE80211_BAND_2GHZ);
 		pChannels[IdLoop].hw_value = IdLoop;
 
 		if (IdLoop < CFG80211_NUM_OF_CHAN_2GHZ)
@@ -3055,7 +3055,7 @@ BOOLEAN CFG80211OS_ChanInfoInit(
 		pChan->band = IEEE80211_BAND_2GHZ;
 	/* End of if */
 
-	pChan->center_freq = ieee80211_channel_to_frequency(ChanId);
+	pChan->center_freq = ieee80211_channel_to_frequency(ChanId, pChan->band);
 
 #if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,32))
 	if (FlgIsNMode == TRUE)
@@ -3112,7 +3112,10 @@ VOID CFG80211OS_Scaning(
 
 
 	/* get channel information */
-	CenFreq = ieee80211_channel_to_frequency(ChanId);
+	if (ChanId > 14)
+	        CenFreq = ieee80211_channel_to_frequency(ChanId, IEEE80211_BAND_5GHZ);
+	else
+		CenFreq = ieee80211_channel_to_frequency(ChanId, IEEE80211_BAND_2GHZ); 
 
 	for(IdChan=0; IdChan<MAX_NUM_OF_CHANNELS; IdChan++)
 	{

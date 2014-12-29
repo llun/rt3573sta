@@ -1428,7 +1428,7 @@ static int CFG80211_OpsPmksaFlush(
 
 struct cfg80211_ops CFG80211_Ops = {
 	/* set channel for a given wireless interface */
-	.set_channel				= CFG80211_OpsChannelSet,
+	.libertas_set_mesh_channel				= CFG80211_OpsChannelSet,
 	/* change type/configuration of virtual interface */
 	.change_virtual_intf		= CFG80211_OpsVirtualInfChg,
 
